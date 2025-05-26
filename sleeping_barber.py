@@ -10,7 +10,7 @@ available_seats = 3
 
 # 1 mutex and 2 semaphores
 accessWRSeats = threading.Semaphore(1) # 1 means number of seats in waiting room can be changed
-barberReady = threading.Semaphore(0)
+barberReady = threading.Semaphore(0) # binary semaphore
 custReady = threading.Semaphore(0)
 
 def barber():
