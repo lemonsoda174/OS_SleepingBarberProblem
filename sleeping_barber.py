@@ -9,7 +9,7 @@ customers = list(range(1, total_customers+1))
 available_seats = 3
 
 # 1 mutex and 2 semaphores
-accessWRSeats = threading.Semaphore(1) # 1 means number of seats in waiting room can be changed
+accessWRSeats = threading.Lock() # 1 means number of seats in waiting room can be changed
 barberReady = threading.Semaphore(0) # binary semaphore
 custReady = threading.Semaphore(0)
 
